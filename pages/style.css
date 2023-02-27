@@ -1,0 +1,200 @@
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #f6f6f6;
+	font-family: 'Alata', sans-serif;
+}
+
+.title-1 {
+	font-size: 50px;
+	color: #3B3B3B;
+	opacity: 0;
+	position: absolute;
+	right: -100px;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.wrapper {
+	position: relative;
+}
+
+.hair {
+	width: 240px;
+	height: 300px;
+	background: #AC5050;
+	border-radius: 55px;
+	position: absolute;
+	left: 34px;
+}
+
+.face {
+	width: 200px;
+	height: 300px;
+	background: #AC5050;
+	border-radius: 0 0 100px 100px;
+	position: relative;
+	bottom: -100px;
+	left: 55px;
+	z-index: 2;
+}
+
+.face-2 {
+	width: 180px;
+	height: 140px;
+	background: #FFF1E1;
+	border-radius: 0 0 100px 100px;
+	margin: 0 auto;
+	padding-top: 35px;
+}
+
+.eyebrow-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+.eyebrow {
+	width: 50px;
+	height: 15px;
+	background: #AC5050;
+	border-radius: 50px;
+}
+
+.eye-container {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 10px;
+}
+
+.eye {
+	width: 25px;
+	height:25px;
+	background: #3b3b3b;
+	border-radius: 50%;
+}
+
+.nouse{
+	width: 25px;
+	height: 20px;
+	background: #E9BA83;
+	border-radius: 50px 50px 100px  100px;
+	margin: 25px auto 0;
+}
+
+.mouth {
+	width: 70px;
+	height: 35px;
+	background: #ff9c91;
+	border-radius: 0 0 100px 100px;
+	margin: 20px auto 0;
+	overflow: hidden;
+}
+
+.teeth {
+	width: 100%;
+	height: 10px;
+	background: white;
+}
+
+.body {
+	width: 310px;
+	height: 150px;
+	background: #7D8ADC;
+	border-radius: 70px 70px 0 0;
+	position: relative;
+}
+
+.shadow-1 {
+	width: 10px;
+	height: 60px;
+	background: #5362C1;
+	position: absolute;
+	border-top-right-radius: 70px;
+	bottom: 0;
+	left: 60px;
+}
+
+.shadow-2 {
+	width: 10px;
+	height: 60px;
+	background: #5362C1;
+	position: absolute;
+	border-top-left-radius: 70px;
+	bottom: 0;
+	right: 60px;
+}
+
+.wrapper:hover .mouth {
+	animation: hoi .5s ease forwards;
+}
+
+.wrapper:hover .face-2 {
+	animation: shock .5s ease forwards;
+}
+
+.wrapper:hover .eye-container {
+	animation: fix .5s ease forwards;
+}
+
+.wrapper:hover .title-1 {
+	animation: muncul .4s ease forwards;
+}
+
+@keyframes hoi {
+	from {
+		width: 50px;
+	}
+	
+	to {
+		width: 50px;
+		height: 60px;
+	}
+}
+
+@keyframes shock {
+	from {
+		padding-top: 35px;
+	}
+	
+	to {
+		padding-top: 15px;
+	}
+}
+
+@keyframes fix {
+	from {
+		margin-top: 10px;
+	}
+	
+	to {
+		margin-top: 20px;
+	}
+}
+
+@keyframes muncul {
+	from {
+		opacity: 0;
+	}
+	
+	to {
+		opacity: 1;
+		transform: rotate(15deg);
+	}
+}
+
+
+
+
+
+

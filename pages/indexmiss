@@ -1,0 +1,43 @@
+<?php
+$localhost="localhost";
+$user="root";
+$pass="";
+$db_name="schoolmanagement";
+$conn=new mysqli($localhost,$user,$pass,$db_name);
+if($conn==true){
+	echo "yes it is working";
+}
+else {
+	echo "not working";
+}
+?>
+<form action ="#" method="post" >
+full name:<br><input type="text" name="id"><br>
+phone:<br><input type="text" name="name"><br>
+email:<br><input type="text" name="lastname"><br>
+city:<br><input type="text" name="course"><br>
+education:<br><input type="text" name="number"><br>
+course:<br><input type="text" name="education"><br>
+<input type="submit">
+</form>
+
+<?php
+$id=$_POST['id'];
+$name=$_POST['name'];
+$lastname=$_POST['lastname'];
+$course=$_POST['course'];
+$number=$_POST['number'];
+$education=$_POST['education'];
+$query="INSERT INTO `admission` VALUES ('$id','$name','$lastname','$course','$number','$education')";
+$insert=mysqli_query($conn,$query);
+if($insert){
+	echo"data inserted";
+}
+else{
+	echo"not inserted";
+}
+?>
+</body>
+
+
+</html>
